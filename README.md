@@ -10,6 +10,7 @@ A free, open-source educational website that teaches Git from zero to practical 
 - **Step-by-Step Lessons** - Learn Git concepts from the basics to advanced workflows
 - **Interactive Playground** - Practice Git commands in a browser-based terminal simulator
 - **Comprehensive Cheatsheet** - Quick reference for all essential Git commands
+- **Certification Test** - Earn a Git proficiency badge with a 15-minute, 15-question test
 - **Dark Mode** - Easy on the eyes with automatic theme detection
 - **Fully Responsive** - Works great on desktop, tablet, and mobile
 - **Accessible** - Built with accessibility in mind (WCAG compliant)
@@ -30,6 +31,7 @@ xdas-git-school/
 ├── learn.html          # Interactive lessons
 ├── playground.html     # Git command simulator
 ├── cheatsheet.html     # Quick reference guide
+├── test.html           # Certification test
 ├── assets/
 │   ├── css/
 │   │   └── style.css   # All styles (GitHub-inspired design)
@@ -115,6 +117,15 @@ Configure DNS settings with your domain provider.
 - Merge vs Rebase - Combining branches
 - GitHub Basics - Remote repositories and collaboration
 
+## Certification Test
+
+Earn a Git proficiency badge by taking our proctored certification test:
+
+- **Duration**: 15 minutes
+- **Questions**: 15 multiple-choice questions covering Git fundamentals
+- **Proctoring**: Full screen required, tab switching and focus loss will end the test
+- **Badge**: Digital badge awarded upon successful completion (12/15 correct)
+
 ## Playground Commands
 
 The interactive playground supports these commands:
@@ -199,5 +210,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - GitHub: @xdas-research
 - Issues: Report a bug
 - Built with love by XDAS Research
+
+https://www.xdastechnology.com/
 
 ```

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take the Git certification test to earn your proficiency badge. 15 questions, 15 minutes.">
+  <meta name="keywords" content="git, test, certification, badge, quiz">
+  <meta name="author" content="XDAS Research">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Git Certification Test - XDAS Git School">
+  <meta property="og:description" content="Earn your Git proficiency badge with our certification test.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xdas-research.github.io/xdas-git-school/test.html">
+  
+  <title>Git Certification Test - XDAS Git School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <!-- Git Branch Icon -->
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.007 8.222A3.738 3.738 0 0 0 17.5 5.33a3.662 3.662 0 0 0-3.17 1.881A3.007 3.007 0 0 0 12.003 6a3.007 3.007 0 0 0-2.326 1.211A3.662 3.662 0 0 0 6.507 5.33a3.738 3.738 0 0 0-3.507 2.892 3.737 3.737 0 0 0 1.823 4.07A3.738 3.738 0 0 0 6.507 18.67a3.662 3.662 0 0 0 3.17-1.881c.605.737 1.511 1.211 2.326 1.211a3.007 3.007 0 0 0 2.327-1.211 3.662 3.662 0 0 0 3.17 1.881 3.738 3.738 0 0 0 1.684-6.377 3.737 3.737 0 0 0 1.823-4.07zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Git School
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="cheatsheet.html" class="nav-link">Cheatsheet</a>
+        <a href="test.html" class="nav-link active">Test</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Moon Icon (Light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun Icon (Dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content text-center">
+          <h1>Git Certification Test</h1>
+          <p class="hero-description">
+            Earn your Git proficiency badge by completing this 15-question test in 15 minutes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <!-- Start Test Section -->
+        <div id="password-section" class="test-start-section">
+          <div class="test-intro">
+            <h2>📝 Git Certification Test</h2>
+            <p class="test-description">Test your Git knowledge and earn your proficiency badge!</p>
+            
+            <div class="test-info-grid">
+              <div class="info-card">
+                <div class="info-icon">⏱️</div>
+                <h3>15 Minutes</h3>
+                <p>Complete all questions within the time limit</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">❓</div>
+                <h3>15 Questions</h3>
+                <p>Multiple choice questions on Git fundamentals</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">🎯</div>
+                <h3>Passing Score</h3>
+                <p>Score 12/15 or higher to earn your badge</p>
+              </div>
+            </div>
+
+            <div class="proctoring-warning">
+              <h3>⚠️ Proctoring Requirements</h3>
+              <ul>
+                <li>You must remain in <strong>full screen mode</strong> throughout the test</li>
+                <li>Do not switch tabs or windows</li>
+                <li>Do not exit full screen mode</li>
+                <li>Do not lose window focus</li>
+                <li><strong>Violating any rule will immediately end the test</strong></li>
+              </ul>
+            </div>
+
+            <button id="start-test-btn" class="btn btn-primary btn-large">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; margin-right: 8px;">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Start Test (Enter Full Screen)
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" style="display: none;">
+          <div class="test-header">
+            <div id="timer" class="timer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px; margin-right: 8px;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="timer-display">15:00</span>
+            </div>
+            <div class="progress-indicator">
+              <span id="answered-count">0</span> / 15 answered
+            </div>
+          </div>
+
+          <form id="quiz-form">
+            <!-- Questions will be inserted here by JS -->
+          </form>
+          
+          <div class="submit-section">
+            <button id="submit-btn" class="btn btn-primary btn-large">Submit Test</button>
+            <p class="submit-warning">Make sure you've answered all questions before submitting!</p>
+          </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" style="display: none;">
+          <div class="results-container">
+            <h2>🎓 Test Results</h2>
+            <div class="score-display">
+              <div class="score-circle">
+                <span id="score-number">0</span>
+                <span class="score-total">/ 15</span>
+              </div>
+              <p id="score-message" class="score-message"></p>
+            </div>
+
+            <div id="badge" class="badge-container" style="display: none;">
+              <div class="badge-earned">
+                <h3>🏆 Congratulations!</h3>
+                <p>You've earned the Git Proficiency Badge</p>
+                <div class="badge-icon">
+                  <svg viewBox="0 0 200 200" style="width: 150px; height: 150px;">
+                    <!-- Badge Background -->
+                    <circle cx="100" cy="100" r="90" fill="#238636"/>
+                    <circle cx="100" cy="100" r="85" fill="#2ea043"/>
+                    
+                    <!-- Star -->
+                    <path d="M100 30 L115 70 L160 75 L130 105 L140 150 L100 125 L60 150 L70 105 L40 75 L85 70 Z" fill="#ffffff"/>
+                    
+                    <!-- Git Icon -->
+                    <g transform="translate(100, 100)">
+                      <circle cx="-25" cy="0" r="12" fill="#238636" stroke="#ffffff" stroke-width="2"/>
+                      <circle cx="25" cy="0" r="12" fill="#238636" stroke="#ffffff" stroke-width="2"/>
+                      <circle cx="0" cy="25" r="12" fill="#238636" stroke="#ffffff" stroke-width="2"/>
+                      <line x1="-25" y1="0" x2="-8" y2="15" stroke="#ffffff" stroke-width="3"/>
+                      <line x1="25" y1="0" x2="8" y2="15" stroke="#ffffff" stroke-width="3"/>
+                    </g>
+                  </svg>
+                </div>
+                <p class="badge-date">Earned on <span id="badge-date"></span></p>
+                <button id="download-badge-btn" class="btn btn-secondary">Download Certificate</button>
+              </div>
+            </div>
+
+            <div class="results-actions">
+              <button id="retake-btn" class="btn btn-primary">Retake Test</button>
+              <a href="learn.html" class="btn btn-secondary">Continue Learning</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Built by <strong>XDAS Research</strong> • Open Source • MIT License
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/xdas-research/xdas-git-school" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/issues" class="footer-link" target="_blank" rel="noopener">Report Issue</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Test Configuration
+    const TEST_DURATION = 900; // 15 minutes in seconds
+    const PASSING_SCORE = 12;
+    const TOTAL_QUESTIONS = 15;
+
+    const questions = [
+      {
+        question: "What is Git primarily used for?",
+        options: ["Text editing", "Version control", "Image processing", "Database management"],
+        answer: 1
+      },
+      {
+        question: "Which command initializes a new Git repository?",
+        options: ["git start", "git init", "git create", "git new"],
+        answer: 1
+      },
+      {
+        question: "What does 'git add .' do?",
+        options: ["Commits all changes", "Stages all files in the current directory", "Shows repository status", "Creates a new branch"],
+        answer: 1
+      },
+      {
+        question: "Which command shows the commit history?",
+        options: ["git status", "git log", "git show", "git history"],
+        answer: 1
+      },
+      {
+        question: "What is a branch in Git?",
+        options: ["An independent line of development", "A file", "A commit message", "A remote repository"],
+        answer: 0
+      },
+      {
+        question: "How do you switch to a different branch?",
+        options: ["git switch <branch>", "git checkout <branch>", "Both A and B", "git change <branch>"],
+        answer: 2
+      },
+      {
+        question: "What does 'git merge' do?",
+        options: ["Creates a new branch", "Combines two branches together", "Deletes a branch", "Pushes changes to remote"],
+        answer: 1
+      },
+      {
+        question: "What is GitHub?",
+        options: ["A Git command-line tool", "A web-based platform for hosting Git repositories", "A text editor for Git", "A database management system"],
+        answer: 1
+      },
+      {
+        question: "Which command pushes changes to a remote repository?",
+        options: ["git send", "git upload", "git push", "git transfer"],
+        answer: 2
+      },
+      {
+        question: "What does 'git pull' do?",
+        options: ["Pushes changes to remote", "Fetches and merges changes from remote", "Creates a new commit", "Shows all branches"],
+        answer: 1
+      },
+      {
+        question: "What is a commit in Git?",
+        options: ["A file in the repository", "A snapshot of your repository at a specific point in time", "A branch name", "A remote server"],
+        answer: 1
+      },
+      {
+        question: "Which command shows the current status of your working directory?",
+        options: ["git log", "git status", "git show", "git info"],
+        answer: 1
+      },
+      {
+        question: "What is a remote repository?",
+        options: ["A local copy of the repository", "A repository hosted on a server (like GitHub)", "A deleted branch", "A commit message"],
+        answer: 1
+      },
+      {
+        question: "How do you create a new branch?",
+        options: ["git new branch <name>", "git branch <name>", "git create branch <name>", "git make branch <name>"],
+        answer: 1
+      },
+      {
+        question: "What is the staging area (index) in Git?",
+        options: ["Where deleted files go", "A preparation area for commits", "The remote repository", "The .git folder"],
+        answer: 1
+      }
+    ];
+
+    let timeLeft = TEST_DURATION;
+    let timerInterval;
+    let testStartTime;
+    let testEnded = false;
+    let answeredQuestions = new Set();
+
+    // Start Test Button
+    document.getElementById('start-test-btn').addEventListener('click', function() {
+      if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled && !document.mozFullScreenEnabled && !document.msFullscreenEnabled) {
+        alert('❌ Full screen is not supported in your browser. Please use Chrome, Firefox, Edge, or Safari.');
+        return;
+      }
+
+      const elem = document.documentElement;
+      const requestFullscreen = elem.requestFullscreen || elem.webkitRequestFullscreen || elem.mozRequestFullScreen || elem.msRequestFullscreen;
+      
+      if (requestFullscreen) {
+        requestFullscreen.call(elem).then(() => {
+          startTest();
+        }).catch(err => {
+          alert('❌ Full screen is required for the test. Please allow full screen access and try again.');
+          console.error('Fullscreen error:', err);
+        });
+      } else {
+        alert('❌ Full screen is not supported. Please use a compatible browser.');
+      }
+    });
+
+    function startTest() {
+      document.getElementById('password-section').style.display = 'none';
+      document.getElementById('quiz-section').style.display = 'block';
+      testStartTime = Date.now();
+      testEnded = false;
+      answeredQuestions.clear();
+      
+      startTimer();
+      loadQuestions();
+      enableProctoring();
+      updateAnsweredCount();
+    }
+
+    function enableProctoring() {
+      // Prevent right-click
+      const preventRightClick = function(e) {
+        if (!testEnded) {
+          e.preventDefault();
+          return false;
+        }
+      };
+      document.addEventListener('contextmenu', preventRightClick);
+
+      // Detect tab/window visibility change
+      const handleVisibilityChange = function() {
+        if (document.hidden && !testEnded) {
+          endTestDueToViolation('Tab switch or window minimization detected');
+        }
+      };
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      // Detect full screen exit
+      const handleFullscreenChange = function() {
+        const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement || 
+                           document.mozFullScreenElement || document.msFullscreenElement;
+        if (!isFullscreen && !testEnded) {
+          endTestDueToViolation('Full screen mode exited');
+        }
+      };
+      document.addEventListener('fullscreenchange', handleFullscreenChange);
+      document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+
+      // Prevent copy/paste/cut
+      const preventCopy = function(e) {
+        if (!testEnded) {
+          e.preventDefault();
+          return false;
+        }
+      };
+      document.addEventListener('copy', preventCopy);
+      document.addEventListener('paste', preventCopy);
+      document.addEventListener('cut', preventCopy);
+
+      // Prevent window blur (focus loss)
+      const handleBlur = function() {
+        // Small delay to avoid false positives from system alerts
+        setTimeout(() => {
+          if (document.hasFocus() === false && !testEnded) {
+            endTestDueToViolation('Window lost focus');
+          }
+        }, 100);
+      };
+      window.addEventListener('blur', handleBlur);
+
+      // Prevent common keyboard shortcuts
+      const preventShortcuts = function(e) {
+        if (!testEnded) {
+          // Prevent F11 (fullscreen toggle), Ctrl+P (print), Ctrl+S (save), etc.
+          if (e.key === 'F11' || 
+              (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u')) ||
+              (e.metaKey && (e.key === 'p' || e.key === 's' || e.key === 'u'))) {
+            e.preventDefault();
+            return false;
+          }
+        }
+      };
+      document.addEventListener('keydown', preventShortcuts);
+    }
+
+    function endTestDueToViolation(reason) {
+      testEnded = true;
+      clearInterval(timerInterval);
+      
+      // Exit fullscreen
+      const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen || 
+                           document.mozCancelFullScreen || document.msExitFullscreen;
+      if (exitFullscreen) {
+        exitFullscreen.call(document);
+      }
+
+      alert('⚠️ Test Ended: ' + reason + '\n\nYour test has been automatically submitted.');
+      submitTest(true);
+    }
+
+    function startTimer() {
+      updateTimerDisplay();
+      
+      timerInterval = setInterval(function() {
+        timeLeft--;
+        updateTimerDisplay();
+        
+        // Warning at 5 minutes
+        if (timeLeft === 300) {
+          alert('⏰ 5 minutes remaining!');
+        }
+        
+        // Warning at 1 minute
+        if (timeLeft === 60) {
+          alert('⚠️ 1 minute remaining!');
+        }
+        
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('⏰ Time is up! Your test will be submitted.');
+          submitTest(true);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      const display = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      document.getElementById('timer-display').textContent = display;
+      
+      // Change timer color when time is running low
+      const timerElement = document.getElementById('timer');
+      if (timeLeft <= 60) {
+        timerElement.style.color = '#cf222e';
+      } else if (timeLeft <= 300) {
+        timerElement.style.color = '#fb8500';
+      }
+    }
+
+    function loadQuestions() {
+      const form = document.getElementById('quiz-form');
+      form.innerHTML = ''; // Clear previous questions
+      
+      questions.forEach((q, index) => {
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question-card';
+        questionDiv.innerHTML = `
+          <h3 class="question-title">
+            <span class="question-number">Question ${index + 1}</span>
+          </h3>
+          <p class="question-text">${q.question}</p>
+          <div class="options-list">
+            ${q.options.map((option, i) => `
+              <label class="option-label">
+                <input type="radio" name="q${index}" value="${i}" onchange="handleAnswerChange()">
+                <span class="option-text">${option}</span>
+              </label>
+            `).join('')}
+          </div>
+        `;
+        form.appendChild(questionDiv);
+      });
+    }
+
+    function handleAnswerChange() {
+      // Update answered questions count
+      answeredQuestions.clear();
+      questions.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected) {
+          answeredQuestions.add(index);
+        }
+      });
+      updateAnsweredCount();
+    }
+
+    function updateAnsweredCount() {
+      document.getElementById('answered-count').textContent = answeredQuestions.size;
+    }
+
+    // Submit Test Button
+    document.getElementById('submit-btn').addEventListener('click', function() {
+      if (answeredQuestions.size < TOTAL_QUESTIONS) {
+        const unanswered = TOTAL_QUESTIONS - answeredQuestions.size;
+        if (!confirm(`⚠️ You have ${unanswered} unanswered question(s).\n\nDo you want to submit anyway?`)) {
+          return;
+        }
+      }
+      submitTest(false);
+    });
+
+    function submitTest(autoSubmit = false) {
+      if (testEnded && !autoSubmit) return; // Prevent double submission
+      
+      testEnded = true;
+      clearInterval(timerInterval);
+      
+      // Calculate score
+      let score = 0;
+      questions.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && parseInt(selected.value) === q.answer) {
+          score++;
+        }
+      });
+
+      // Calculate time taken
+      const timeTaken = Math.floor((Date.now() - testStartTime) / 1000);
+      const minutesTaken = Math.floor(timeTaken / 60);
+      const secondsTaken = timeTaken % 60;
+
+      // Hide quiz section and show results
+      document.getElementById('quiz-section').style.display = 'none';
+      document.getElementById('results-section').style.display = 'block';
+      
+      // Display score
+      document.getElementById('score-number').textContent = score;
+      
+      // Display message based on score
+      const scoreMessage = document.getElementById('score-message');
+      const percentage = Math.round((score / TOTAL_QUESTIONS) * 100);
+      
+      if (score >= PASSING_SCORE) {
+        scoreMessage.innerHTML = `
+          <strong style="color: #2ea043;">✅ Passed!</strong><br>
+          You scored ${percentage}% (${score}/${TOTAL_QUESTIONS})<br>
+          Time taken: ${minutesTaken}:${secondsTaken < 10 ? '0' : ''}${secondsTaken}
+        `;
+        document.getElementById('badge').style.display = 'block';
+        
+        // Set badge date
+        const today = new Date();
+        const dateStr = today.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+        document.getElementById('badge-date').textContent = dateStr;
+      } else {
+        scoreMessage.innerHTML = `
+          <strong style="color: #cf222e;">❌ Not Passed</strong><br>
+          You scored ${percentage}% (${score}/${TOTAL_QUESTIONS})<br>
+          You need ${PASSING_SCORE}/${TOTAL_QUESTIONS} to pass<br>
+          Time taken: ${minutesTaken}:${secondsTaken < 10 ? '0' : ''}${secondsTaken}
+        `;
+        document.getElementById('badge').style.display = 'none';
+      }
+
+      // Exit full screen
+      const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen || 
+                           document.mozCancelFullScreen || document.msExitFullscreen;
+      if (exitFullscreen) {
+        exitFullscreen.call(document).catch(err => {
+          console.error('Error exiting fullscreen:', err);
+        });
+      }
+    }
+
+    // Retake Test Button
+    document.getElementById('retake-btn').addEventListener('click', function() {
+      // Reset everything
+      testEnded = false;
+      timeLeft = TEST_DURATION;
+      answeredQuestions.clear();
+      
+      document.getElementById('results-section').style.display = 'none';
+      document.getElementById('password-section').style.display = 'block';
+      
+      // Reset timer display
+      document.getElementById('timer-display').textContent = '15:00';
+      document.getElementById('timer').style.color = '';
+    });
+
+    // Download Badge (simple implementation - creates a certificate)
+    document.getElementById('download-badge-btn').addEventListener('click', function() {
+      const score = document.getElementById('score-number').textContent;
+      const date = document.getElementById('badge-date').textContent;
+      
+      const certificate = `
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║           GIT PROFICIENCY CERTIFICATION                   ║
+║                                                            ║
+║              🏆 XDAS Git School 🏆                        ║
+║                                                            ║
+╠════════════════════════════════════════════════════════════╣
+║                                                            ║
+║  This certifies that the bearer has successfully          ║
+║  completed the Git Certification Test with a score of:    ║
+║                                                            ║
+║                    ${score}/15 (${Math.round((score/15)*100)}%)                          ║
+║                                                            ║
+║  Date Earned: ${date}                                     ║
+║                                                            ║
+║  This certification demonstrates proficiency in:          ║
+║  • Git fundamentals and core concepts                     ║
+║  • Version control best practices                         ║
+║  • Branch management and collaboration                    ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+        Issued by: XDAS Research
+        Website: https://xdas-research.github.io/xdas-git-school/
+      `.trim();
+
+      const blob = new Blob([certificate], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Git_Proficiency_Certificate.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
