@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A comprehensive Git command cheatsheet with examples. Quick reference for all essential Git commands.">
+  <title>Git Cheatsheet - XDAS Git School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.007 8.222A3.738 3.738 0 0 0 17.5 5.33a3.662 3.662 0 0 0-3.17 1.881A3.007 3.007 0 0 0 12.003 6a3.007 3.007 0 0 0-2.326 1.211A3.662 3.662 0 0 0 6.507 5.33a3.738 3.738 0 0 0-3.507 2.892 3.737 3.737 0 0 0 1.823 4.07A3.738 3.738 0 0 0 6.507 18.67a3.662 3.662 0 0 0 3.17-1.881c.605.737 1.511 1.211 2.326 1.211a3.007 3.007 0 0 0 2.327-1.211 3.662 3.662 0 0 0 3.17 1.881 3.738 3.738 0 0 0 1.684-6.377 3.737 3.737 0 0 0 1.823-4.07zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Git School
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="cheatsheet.html" class="nav-link active">Cheatsheet</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Header -->
+    <section class="cheatsheet-header">
+      <div class="container">
+        <h1 class="section-title">Git Command Cheatsheet</h1>
+        <p class="section-description">
+          A quick reference guide for the most commonly used Git commands. Bookmark this page for easy access.
+        </p>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <div class="container">
+      <div class="cheatsheet-search">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Search commands..."
+            aria-label="Search Git commands"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Cheatsheet Content -->
+    <section class="cheatsheet-content">
+      <div class="container">
+        <div class="cheatsheet-grid">
+          
+          <!-- Setup & Configuration -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0-.33-1.82l.63-1.03a2 2 0 0 0-.73-2.73l-.06-.04a2 2 0 0 0-2.73.73l-.63 1.03a1.65 1.65 0 0 0-1.82.33l-1.03-.63a2 2 0 0 0-2.73.73l-.06.04a2 2 0 0 0 .73 2.73l1.03.63a1.65 1.65 0 0 0 .33 1.82l-.63 1.03a2 2 0 0 0 .73 2.73l.06.04a2 2 0 0 0 2.73-.73l.63-1.03a1.65 1.65 0 0 0 1.82-.33l1.03.63a2 2 0 0 0 2.73-.73l.06-.04a2 2 0 0 0-.73-2.73l-1.03-.63z"/>
+              </svg>
+              Setup & Configuration
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git config --global user.name "name"</code>
+                <p class="command-description">Set the name attached to your commits</p>
+                <p class="command-example">git config --global user.name "John Doe"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --global user.email "email"</code>
+                <p class="command-description">Set the email attached to your commits</p>
+                <p class="command-example">git config --global user.email "john@example.com"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --list</code>
+                <p class="command-description">View all Git configuration settings</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git init</code>
+                <p class="command-description">Create a new local Git repository</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git clone &lt;url&gt;</code>
+                <p class="command-description">Clone a repository from a remote source</p>
+                <p class="command-example">git clone https://github.com/user/repo.git</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Basic Commands -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+              Basic Commands
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git status</code>
+                <p class="command-description">Show the status of your working directory</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git add &lt;file&gt;</code>
+                <p class="command-description">Stage a specific file for commit</p>
+                <p class="command-example">git add index.html</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git add .</code>
+                <p class="command-description">Stage all changed files for commit</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git commit -m "message"</code>
+                <p class="command-description">Commit staged changes with a message</p>
+                <p class="command-example">git commit -m "Add login feature"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git commit --amend</code>
+                <p class="command-description">Modify the most recent commit</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branching -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="6" y1="3" x2="6" y2="15"/>
+                <circle cx="18" cy="6" r="3"/>
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M18 9a9 9 0 0 1-9 9"/>
+              </svg>
+              Branching
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git branch</code>
+                <p class="command-description">List all local branches</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git branch &lt;name&gt;</code>
+                <p class="command-description">Create a new branch</p>
+                <p class="command-example">git branch feature-login</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git checkout &lt;branch&gt;</code>
+                <p class="command-description">Switch to a different branch</p>
+                <p class="command-example">git checkout main</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git checkout -b &lt;name&gt;</code>
+                <p class="command-description">Create and switch to a new branch</p>
+                <p class="command-example">git checkout -b feature-signup</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git switch &lt;branch&gt;</code>
+                <p class="command-description">Switch branches (newer command)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git switch -c &lt;name&gt;</code>
+                <p class="command-description">Create and switch to new branch (newer)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git branch -d &lt;name&gt;</code>
+                <p class="command-description">Delete a branch (safe)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git branch -D &lt;name&gt;</code>
+                <p class="command-description">Force delete a branch</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Merging & Rebasing -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="18" r="3"/>
+                <circle cx="6" cy="6" r="3"/>
+                <path d="M6 21V9a9 9 0 0 0 9 9"/>
+              </svg>
+              Merging & Rebasing
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git merge &lt;branch&gt;</code>
+                <p class="command-description">Merge a branch into current branch</p>
+                <p class="command-example">git merge feature-login</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git rebase &lt;branch&gt;</code>
+                <p class="command-description">Rebase current branch onto another</p>
+                <p class="command-example">git rebase main</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git rebase --abort</code>
+                <p class="command-description">Cancel an in-progress rebase</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git merge --abort</code>
+                <p class="command-description">Cancel an in-progress merge</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git cherry-pick &lt;commit&gt;</code>
+                <p class="command-description">Apply a specific commit to current branch</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- History & Inspection -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              History & Inspection
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git log</code>
+                <p class="command-description">Show commit history</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git log --oneline</code>
+                <p class="command-description">Show compact commit history</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git log --graph</code>
+                <p class="command-description">Show history with branch graph</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git log -p</code>
+                <p class="command-description">Show history with file changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git show &lt;commit&gt;</code>
+                <p class="command-description">Show details of a specific commit</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git diff</code>
+                <p class="command-description">Show unstaged changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git diff --staged</code>
+                <p class="command-description">Show staged changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git blame &lt;file&gt;</code>
+                <p class="command-description">Show who changed each line of a file</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Remote Repositories -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              Remote Repositories
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git remote -v</code>
+                <p class="command-description">List all remote repositories</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git remote add &lt;name&gt; &lt;url&gt;</code>
+                <p class="command-description">Add a new remote repository</p>
+                <p class="command-example">git remote add origin https://github.com/user/repo.git</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git push &lt;remote&gt; &lt;branch&gt;</code>
+                <p class="command-description">Push commits to remote repository</p>
+                <p class="command-example">git push origin main</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git push -u origin &lt;branch&gt;</code>
+                <p class="command-description">Push and set upstream branch</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git pull</code>
+                <p class="command-description">Fetch and merge changes from remote</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git fetch</code>
+                <p class="command-description">Download changes without merging</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git push --force</code>
+                <p class="command-description">Force push (use with caution!)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Undoing Changes -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+              </svg>
+              Undoing Changes
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git restore &lt;file&gt;</code>
+                <p class="command-description">Discard changes in working directory</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git restore --staged &lt;file&gt;</code>
+                <p class="command-description">Unstage a file (keep changes)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git reset HEAD~1</code>
+                <p class="command-description">Undo last commit (keep changes)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git reset --hard HEAD~1</code>
+                <p class="command-description">Undo last commit (discard changes)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git revert &lt;commit&gt;</code>
+                <p class="command-description">Create new commit that undoes changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git clean -fd</code>
+                <p class="command-description">Remove untracked files and directories</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stashing -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                <polyline points="17 21 17 13 7 13 7 21"/>
+                <polyline points="7 3 7 8 15 8"/>
+              </svg>
+              Stashing
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git stash</code>
+                <p class="command-description">Temporarily save uncommitted changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash save "message"</code>
+                <p class="command-description">Stash with a description</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash list</code>
+                <p class="command-description">List all stashed changes</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash pop</code>
+                <p class="command-description">Apply and remove latest stash</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash apply</code>
+                <p class="command-description">Apply latest stash (keep in list)</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash drop</code>
+                <p class="command-description">Delete the latest stash</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git stash clear</code>
+                <p class="command-description">Delete all stashes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                <line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
+              Tags
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git tag</code>
+                <p class="command-description">List all tags</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git tag &lt;name&gt;</code>
+                <p class="command-description">Create a lightweight tag</p>
+                <p class="command-example">git tag v1.0.0</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git tag -a &lt;name&gt; -m "msg"</code>
+                <p class="command-description">Create an annotated tag</p>
+                <p class="command-example">git tag -a v1.0.0 -m "Release 1.0"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git push origin &lt;tag&gt;</code>
+                <p class="command-description">Push a specific tag to remote</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git push origin --tags</code>
+                <p class="command-description">Push all tags to remote</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- .gitignore -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+              </svg>
+              .gitignore Patterns
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">*.log</code>
+                <p class="command-description">Ignore all .log files</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">node_modules/</code>
+                <p class="command-description">Ignore the node_modules directory</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">/build</code>
+                <p class="command-description">Ignore build folder in root only</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">*.env</code>
+                <p class="command-description">Ignore environment files</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">!important.log</code>
+                <p class="command-description">Don't ignore this specific file</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">**/*.tmp</code>
+                <p class="command-description">Ignore .tmp files in all directories</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Helpful Aliases -->
+          <div class="cheatsheet-category">
+            <div class="category-header">
+              <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+              Helpful Aliases
+            </div>
+            <div class="command-list">
+              <div class="command-item">
+                <code class="command-syntax">git config --global alias.co checkout</code>
+                <p class="command-description">Use "git co" instead of "git checkout"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --global alias.br branch</code>
+                <p class="command-description">Use "git br" instead of "git branch"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --global alias.ci commit</code>
+                <p class="command-description">Use "git ci" instead of "git commit"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --global alias.st status</code>
+                <p class="command-description">Use "git st" instead of "git status"</p>
+              </div>
+              <div class="command-item">
+                <code class="command-syntax">git config --global alias.lg "log --oneline --graph"</code>
+                <p class="command-description">Create a pretty log alias</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Built by <strong>XDAS Research</strong> • Open Source • MIT License
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/xdas-research/xdas-git-school" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/issues" class="footer-link" target="_blank" rel="noopener">Report Issue</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Git from scratch with interactive tutorials, a hands-on playground, and comprehensive cheatsheet. Free and open source by XDAS Research.">
+  <meta name="keywords" content="git, tutorial, learn git, version control, github, beginner">
+  <meta name="author" content="XDAS Research">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="XDAS Git School - Learn Git from Scratch">
+  <meta property="og:description" content="Master Git version control with beginner-friendly tutorials and hands-on practice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xdas-research.github.io/xdas-git-school/">
+  
+  <title>XDAS Git School - Learn Git from Scratch</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <!-- Git Branch Icon -->
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.007 8.222A3.738 3.738 0 0 0 17.5 5.33a3.662 3.662 0 0 0-3.17 1.881A3.007 3.007 0 0 0 12.003 6a3.007 3.007 0 0 0-2.326 1.211A3.662 3.662 0 0 0 6.507 5.33a3.738 3.738 0 0 0-3.507 2.892 3.737 3.737 0 0 0 1.823 4.07A3.738 3.738 0 0 0 6.507 18.67a3.662 3.662 0 0 0 3.17-1.881c.605.737 1.511 1.211 2.326 1.211a3.007 3.007 0 0 0 2.327-1.211 3.662 3.662 0 0 0 3.17 1.881 3.738 3.738 0 0 0 1.684-6.377 3.737 3.737 0 0 0 1.823-4.07zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Git School
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="cheatsheet.html" class="nav-link">Cheatsheet</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Moon Icon (Light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun Icon (Dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        
+        <a href="https://github.com/xdas-research/xdas-git-school" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">
+          <!-- GitHub Icon -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Free & Open Source
+          </div>
+          
+          <h1 class="hero-title">Master Git Version Control from Scratch</h1>
+          
+          <p class="hero-description">
+            Learn Git the right way with beginner-friendly tutorials, hands-on practice in our interactive playground, and a comprehensive command reference.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="learn.html" class="btn btn-primary btn-lg">
+              Start Learning Git
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"/>
+              </svg>
+            </a>
+            <a href="playground.html" class="btn btn-secondary btn-lg">
+              Try the Playground
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-graphic">
+          <div class="terminal-demo">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">Terminal — my-project</span>
+            </div>
+            <div class="terminal-body">
+              <!-- Animated via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Everything You Need to Learn Git</h2>
+          <p class="section-description">
+            From basic concepts to real-world workflows, we've got you covered with comprehensive resources designed for beginners.
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Step-by-Step Lessons</h3>
+            <p class="feature-description">
+              Clear, jargon-free explanations that build your understanding progressively. Each lesson includes examples, sample output, and common pitfalls to avoid.
+            </p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Interactive Playground</h3>
+            <p class="feature-description">
+              Practice Git commands in a safe, simulated environment. No installation required—experiment freely without fear of breaking anything.
+            </p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Quick Reference Cheatsheet</h3>
+            <p class="feature-description">
+              A searchable collection of Git commands with clear descriptions and examples. Bookmark it for quick lookups while you work.
+            </p>
+          </div>
+          
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Common Mistakes Explained</h3>
+            <p class="feature-description">
+              Learn from common errors before you make them. Each lesson highlights typical mistakes and shows you how to avoid or fix them.
+            </p>
+          </div>
+          
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">No Prerequisites</h3>
+            <p class="feature-description">
+              Start from absolute zero. We explain everything from what version control is to advanced workflows like branching and merging.
+            </p>
+          </div>
+          
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">100% Free & Open Source</h3>
+            <p class="feature-description">
+              No sign-ups, no paywalls, no tracking. This project is MIT licensed and open for contributions on GitHub.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section class="learning-path-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Your Learning Path</h2>
+          <p class="section-description">
+            Follow this structured path to go from Git beginner to confident user.
+          </p>
+        </div>
+        
+        <div class="learning-path">
+          <div class="path-item">
+            <div class="path-number">1</div>
+            <div class="path-content">
+              <h3 class="path-title">Understand the Basics</h3>
+              <p class="path-description">Learn what Git is, why it exists, and how it helps developers track changes and collaborate.</p>
+            </div>
+          </div>
+          
+          <div class="path-connector"></div>
+          
+          <div class="path-item">
+            <div class="path-number">2</div>
+            <div class="path-content">
+              <h3 class="path-title">Set Up Your Environment</h3>
+              <p class="path-description">Install Git on your computer and configure your identity for commits.</p>
+            </div>
+          </div>
+          
+          <div class="path-connector"></div>
+          
+          <div class="path-item">
+            <div class="path-number">3</div>
+            <div class="path-content">
+              <h3 class="path-title">Master Core Commands</h3>
+              <p class="path-description">Learn the essential commands: init, status, add, commit, and log. These form 90% of daily Git usage.</p>
+            </div>
+          </div>
+          
+          <div class="path-connector"></div>
+          
+          <div class="path-item">
+            <div class="path-number">4</div>
+            <div class="path-content">
+              <h3 class="path-title">Work with Branches</h3>
+              <p class="path-description">Understand how to create branches, switch between them, and merge your work.</p>
+            </div>
+          </div>
+          
+          <div class="path-connector"></div>
+          
+          <div class="path-item">
+            <div class="path-number">5</div>
+            <div class="path-content">
+              <h3 class="path-title">Collaborate on GitHub</h3>
+              <p class="path-description">Push your code to GitHub, clone repositories, and collaborate with others using pull requests.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <a href="learn.html" class="btn btn-primary btn-lg">Start Your Journey</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Built by <strong>XDAS Research</strong> • Open Source • MIT License
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/xdas-research/xdas-git-school" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/issues" class="footer-link" target="_blank" rel="noopener">Report Issue</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

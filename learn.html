@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Git step by step with beginner-friendly lessons covering init, status, add, commit, branches, and more.">
+  <title>Learn Git - XDAS Git School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.007 8.222A3.738 3.738 0 0 0 17.5 5.33a3.662 3.662 0 0 0-3.17 1.881A3.007 3.007 0 0 0 12.003 6a3.007 3.007 0 0 0-2.326 1.211A3.662 3.662 0 0 0 6.507 5.33a3.738 3.738 0 0 0-3.507 2.892 3.737 3.737 0 0 0 1.823 4.07A3.738 3.738 0 0 0 6.507 18.67a3.662 3.662 0 0 0 3.17-1.881c.605.737 1.511 1.211 2.326 1.211a3.007 3.007 0 0 0 2.327-1.211 3.662 3.662 0 0 0 3.17 1.881 3.738 3.738 0 0 0 1.684-6.377 3.737 3.737 0 0 0 1.823-4.07zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Git School
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="learn.html" class="nav-link active">Learn</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="cheatsheet.html" class="nav-link">Cheatsheet</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="lessons-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="lessons-sidebar">
+          <nav class="sidebar-nav" aria-label="Lesson navigation">
+            <h2 class="sidebar-title">Lessons</h2>
+            <ul class="lesson-nav-list">
+              <li>
+                <a href="#what-is-git" class="lesson-nav-link active" data-lesson-id="what-is-git">
+                  <span class="lesson-nav-number">1</span>
+                  What is Git?
+                </a>
+              </li>
+              <li>
+                <a href="#installing-git" class="lesson-nav-link" data-lesson-id="installing-git">
+                  <span class="lesson-nav-number">2</span>
+                  Installing Git
+                </a>
+              </li>
+              <li>
+                <a href="#git-init" class="lesson-nav-link" data-lesson-id="git-init">
+                  <span class="lesson-nav-number">3</span>
+                  git init
+                </a>
+              </li>
+              <li>
+                <a href="#git-status" class="lesson-nav-link" data-lesson-id="git-status">
+                  <span class="lesson-nav-number">4</span>
+                  git status
+                </a>
+              </li>
+              <li>
+                <a href="#git-add" class="lesson-nav-link" data-lesson-id="git-add">
+                  <span class="lesson-nav-number">5</span>
+                  git add
+                </a>
+              </li>
+              <li>
+                <a href="#git-commit" class="lesson-nav-link" data-lesson-id="git-commit">
+                  <span class="lesson-nav-number">6</span>
+                  git commit
+                </a>
+              </li>
+              <li>
+                <a href="#git-log" class="lesson-nav-link" data-lesson-id="git-log">
+                  <span class="lesson-nav-number">7</span>
+                  git log
+                </a>
+              </li>
+              <li>
+                <a href="#branches" class="lesson-nav-link" data-lesson-id="branches">
+                  <span class="lesson-nav-number">8</span>
+                  Branches
+                </a>
+              </li>
+              <li>
+                <a href="#merge-vs-rebase" class="lesson-nav-link" data-lesson-id="merge-vs-rebase">
+                  <span class="lesson-nav-number">9</span>
+                  Merge vs Rebase
+                </a>
+              </li>
+              <li>
+                <a href="#github-basics" class="lesson-nav-link" data-lesson-id="github-basics">
+                  <span class="lesson-nav-number">10</span>
+                  GitHub Basics
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Lesson Content -->
+        <div class="lesson-content">
+          <!-- Lesson 1: What is Git? -->
+          <article id="what-is-git" class="lesson-article">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>What is Git?</span>
+              </nav>
+              <h1 class="lesson-title">What is Git?</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  5 min read
+                </span>
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                  Beginner
+                </span>
+              </div>
+            </header>
+
+            <h2>What is Version Control?</h2>
+            <p>
+              Imagine you're writing a document and you want to keep track of all the changes you've made over time. You might save copies like <code>document_v1.docx</code>, <code>document_v2.docx</code>, <code>document_final.docx</code>, <code>document_final_FINAL.docx</code>... Sound familiar?
+            </p>
+            <p>
+              <strong>Version control</strong> is a system that records changes to files over time so you can recall specific versions later. Instead of creating dozens of copies, version control automatically tracks what changed, when it changed, and who changed it.
+            </p>
+
+            <h2>So What is Git?</h2>
+            <p>
+              <strong>Git</strong> is the most popular version control system in the world. Created by Linus Torvalds (the creator of Linux) in 2005, Git helps you:
+            </p>
+            <ul>
+              <li><strong>Track changes</strong> - See exactly what changed in each file and when</li>
+              <li><strong>Undo mistakes</strong> - Easily revert to a previous version if something goes wrong</li>
+              <li><strong>Collaborate</strong> - Work with others on the same project without overwriting each other's work</li>
+              <li><strong>Branch out</strong> - Experiment with new features without affecting the main project</li>
+            </ul>
+
+            <h2>Why Should You Learn Git?</h2>
+            <p>
+              Git is an essential skill for software developers, but it's useful for anyone who works with files that change over time:
+            </p>
+            <ul>
+              <li>Writers tracking document revisions</li>
+              <li>Designers managing project iterations</li>
+              <li>Students collaborating on group projects</li>
+              <li>Anyone who's ever lost work to an accidental save</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Git vs GitHub</div>
+                <p class="callout-text">
+                  Git is the version control <em>tool</em>. GitHub is a <em>website</em> that hosts Git repositories online and adds collaboration features. Think of Git as the engine and GitHub as the garage where you park your car.
+                </p>
+              </div>
+            </div>
+
+            <h2>How Git Works (The Simple Version)</h2>
+            <p>
+              Git tracks your project in a special folder called a <strong>repository</strong> (or "repo"). Inside this repo, Git keeps a complete history of every change you've saved.
+            </p>
+            <p>
+              The basic workflow is:
+            </p>
+            <ol>
+              <li><strong>Modify</strong> - Change files in your project</li>
+              <li><strong>Stage</strong> - Choose which changes you want to save</li>
+              <li><strong>Commit</strong> - Save a snapshot of your staged changes with a description</li>
+            </ol>
+            <p>
+              Each commit is like a checkpoint in a video game—you can always go back to it if needed.
+            </p>
+
+            <div class="callout callout-warning">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Common Mistake</div>
+                <p class="callout-text">
+                  Don't skip learning Git because it seems complicated. The basics are simple, and even knowing just 5-6 commands will cover 90% of what you need day-to-day.
+                </p>
+              </div>
+            </div>
+
+            <h2>Ready to Start?</h2>
+            <p>
+              In the next lesson, we'll install Git on your computer and get everything set up. Let's go!
+            </p>
+
+            <nav class="lesson-nav">
+              <div></div>
+              <a href="#installing-git" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">Installing Git →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 2: Installing Git -->
+          <article id="installing-git" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>Installing Git</span>
+              </nav>
+              <h1 class="lesson-title">Installing Git</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  8 min read
+                </span>
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                  Beginner
+                </span>
+              </div>
+            </header>
+
+            <h2>Check if Git is Already Installed</h2>
+            <p>
+              Before installing, let's check if Git is already on your computer. Open your terminal (or Command Prompt on Windows) and type:
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git --version</pre>
+              </div>
+            </div>
+
+            <p>If Git is installed, you'll see something like:</p>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              git version 2.42.0
+            </div>
+
+            <p>If you see a version number, you're all set! Skip to the configuration section below.</p>
+
+            <h2>Installing on Windows</h2>
+            <ol>
+              <li>Go to <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git-scm.com/download/win</a></li>
+              <li>Download the installer and run it</li>
+              <li>Accept the default options (they're fine for beginners)</li>
+              <li>Click through the installation wizard</li>
+            </ol>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Git Bash</div>
+                <p class="callout-text">
+                  The Windows installer includes "Git Bash," a terminal that gives you a Linux-like command line experience. It's the recommended way to use Git on Windows.
+                </p>
+              </div>
+            </div>
+
+            <h2>Installing on macOS</h2>
+            <p>The easiest way is using Homebrew:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>brew install git</pre>
+              </div>
+            </div>
+
+            <p>If you don't have Homebrew, you can install Git by installing Xcode Command Line Tools:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>xcode-select --install</pre>
+              </div>
+            </div>
+
+            <h2>Installing on Linux</h2>
+            <p>Use your distribution's package manager:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Debian/Ubuntu</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>sudo apt-get update
+sudo apt-get install git</pre>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Fedora</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>sudo dnf install git</pre>
+              </div>
+            </div>
+
+            <h2>Configuring Git</h2>
+            <p>
+              After installation, you need to tell Git who you are. This information will be attached to every commit you make.
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</pre>
+              </div>
+            </div>
+
+            <p>Replace "Your Name" and the email with your actual information.</p>
+
+            <h3>Verify Your Configuration</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git config --list</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              user.name=Your Name
+user.email=your.email@example.com
+            </div>
+
+            <div class="callout callout-danger">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Common Mistake</div>
+                <p class="callout-text">
+                  Don't forget to configure your email! If you skip this step, your commits won't be properly attributed to you, which matters when collaborating with others.
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#what-is-git" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← What is Git?</span>
+                </div>
+              </a>
+              <a href="#git-init" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">git init →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 3: git init -->
+          <article id="git-init" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>git init</span>
+              </nav>
+              <h1 class="lesson-title">git init</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>What Does git init Do?</h2>
+            <p>
+              The <code>git init</code> command creates a new Git repository. It's the first command you run when starting a new project that you want to track with Git.
+            </p>
+            <p>
+              When you run <code>git init</code>, Git creates a hidden folder called <code>.git</code> in your project directory. This folder contains all the information Git needs to track your project's history.
+            </p>
+
+            <h2>How to Use It</h2>
+            <p>First, create a folder for your project and navigate into it:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>mkdir my-project
+cd my-project</pre>
+              </div>
+            </div>
+
+            <p>Then initialize Git:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git init</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              Initialized empty Git repository in /Users/you/my-project/.git/
+            </div>
+
+            <h2>What Just Happened?</h2>
+            <p>Git created a <code>.git</code> folder in your project. You can verify this:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>ls -la</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              total 0
+drwxr-xr-x   3 you  staff   96 Jan  1 12:00 .
+drwxr-xr-x   5 you  staff  160 Jan  1 12:00 ..
+drwxr-xr-x  10 you  staff  320 Jan  1 12:00 .git
+            </div>
+
+            <div class="callout callout-warning">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Don't Delete .git!</div>
+                <p class="callout-text">
+                  The <code>.git</code> folder contains your entire project history. If you delete it, you'll lose all your commits and version control for that project.
+                </p>
+              </div>
+            </div>
+
+            <h2>Common Mistakes</h2>
+            
+            <h3>1. Running git init in the Wrong Folder</h3>
+            <p>
+              Make sure you're in your project folder before running <code>git init</code>. Running it in your home directory or a parent folder will track way more files than you intend.
+            </p>
+
+            <h3>2. Initializing Inside Another Git Repository</h3>
+            <p>
+              Don't create a Git repository inside another Git repository (nested repos). This creates confusion and problems. If you're unsure whether you're already in a repo:
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git status</pre>
+              </div>
+            </div>
+
+            <p>If you see "fatal: not a git repository," you're safe to run <code>git init</code>.</p>
+
+            <div class="callout callout-success">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Try It!</div>
+                <p class="callout-text">
+                  Head over to the <a href="playground.html">Playground</a> and try running <code>git init</code> yourself!
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#installing-git" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← Installing Git</span>
+                </div>
+              </a>
+              <a href="#git-status" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">git status →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 4: git status -->
+          <article id="git-status" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>git status</span>
+              </nav>
+              <h1 class="lesson-title">git status</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>Your Best Friend in Git</h2>
+            <p>
+              The <code>git status</code> command shows you the current state of your repository. It tells you:
+            </p>
+            <ul>
+              <li>Which branch you're on</li>
+              <li>Which files have been modified</li>
+              <li>Which files are staged (ready to be committed)</li>
+              <li>Which files are untracked (new files Git doesn't know about)</li>
+            </ul>
+
+            <h2>Using git status</h2>
+            <p>Simply run:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+                            <div class="code-content">
+                <pre>git status</pre>
+              </div>
+            </div>
+
+            <h3>In a Clean Repository</h3>
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              On branch main
+nothing to commit, working tree clean
+            </div>
+
+            <h3>With Untracked Files</h3>
+            <p>Let's create a new file and check the status:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>echo "Hello World" > hello.txt
+git status</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+            </div>
+
+            <h3>With Staged Files</h3>
+            <p>After running <code>git add hello.txt</code>:</p>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+        new file:   hello.txt
+            </div>
+
+            <h2>Understanding the Output</h2>
+            <p>Git status shows files in different categories:</p>
+            
+            <ul>
+              <li><strong style="color: var(--color-danger-emphasis);">Untracked files</strong> (red) - New files Git doesn't know about yet</li>
+              <li><strong style="color: var(--color-success-emphasis);">Changes to be committed</strong> (green) - Files staged and ready for commit</li>
+              <li><strong style="color: var(--color-danger-emphasis);">Changes not staged</strong> (red) - Modified files not yet staged</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Pro Tip</div>
+                <p class="callout-text">
+                  Run <code>git status</code> frequently! It's the best way to understand what's happening in your repository. When in doubt, check the status.
+                </p>
+              </div>
+            </div>
+
+            <h2>Short Status</h2>
+            <p>For a more compact view, use the <code>-s</code> flag:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git status -s</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              A  hello.txt
+?? newfile.txt
+ M modified.txt
+            </div>
+
+            <p>The codes mean:</p>
+            <ul>
+              <li><code>A</code> - Added (staged)</li>
+              <li><code>??</code> - Untracked</li>
+              <li><code>M</code> - Modified</li>
+            </ul>
+
+            <nav class="lesson-nav">
+              <a href="#git-init" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← git init</span>
+                </div>
+              </a>
+              <a href="#git-add" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">git add →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 5: git add -->
+          <article id="git-add" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>git add</span>
+              </nav>
+              <h1 class="lesson-title">git add</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>The Staging Area</h2>
+            <p>
+              Before you can save (commit) your changes, you need to tell Git which changes to include. This is called <strong>staging</strong>, and the <code>git add</code> command is how you do it.
+            </p>
+            <p>
+              Think of it like packing a box before shipping. You choose what goes in the box (staging), then seal and ship it (commit).
+            </p>
+
+            <h2>Adding a Single File</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git add filename.txt</pre>
+              </div>
+            </div>
+
+            <h2>Adding Multiple Files</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git add file1.txt file2.txt file3.txt</pre>
+              </div>
+            </div>
+
+            <h2>Adding All Files</h2>
+            <p>To stage all changed and new files at once:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git add .</pre>
+              </div>
+            </div>
+
+            <p>The dot (<code>.</code>) means "everything in the current directory and subdirectories."</p>
+
+            <div class="callout callout-warning">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Be Careful with git add .</div>
+                <p class="callout-text">
+                  Using <code>git add .</code> stages everything, including files you might not want to commit (like passwords, API keys, or log files). Always run <code>git status</code> after to check what you staged.
+                </p>
+              </div>
+            </div>
+
+            <h2>Example Workflow</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># Create some files
+echo "# My Project" > README.md
+echo "console.log('hello');" > app.js
+
+# Check status - files are untracked
+git status
+
+# Stage the files
+git add README.md app.js
+
+# Check status again - files are now staged
+git status</pre>
+              </div>
+            </div>
+
+            <h2>Unstaging Files</h2>
+            <p>Made a mistake? Remove a file from the staging area:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git restore --staged filename.txt</pre>
+              </div>
+            </div>
+
+            <p>Or for older Git versions:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git reset HEAD filename.txt</pre>
+              </div>
+            </div>
+
+            <h2>Common Mistakes</h2>
+
+            <h3>1. Forgetting to Stage Before Committing</h3>
+            <p>
+              If you modify a file but don't run <code>git add</code>, the changes won't be included in your commit. Always check <code>git status</code> before committing.
+            </p>
+
+            <h3>2. Staging Sensitive Files</h3>
+            <p>
+              Use a <code>.gitignore</code> file to prevent sensitive files from being staged:
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>.gitignore</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># Ignore these files
+.env
+passwords.txt
+node_modules/
+*.log</pre>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#git-status" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← git status</span>
+                </div>
+              </a>
+              <a href="#git-commit" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">git commit →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 6: git commit -->
+          <article id="git-commit" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>git commit</span>
+              </nav>
+              <h1 class="lesson-title">git commit</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  7 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>Saving Your Work</h2>
+            <p>
+              The <code>git commit</code> command saves your staged changes as a permanent snapshot in your repository's history. Each commit is like a checkpoint you can return to later.
+            </p>
+
+            <h2>Basic Usage</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git commit -m "Your commit message here"</pre>
+              </div>
+            </div>
+
+            <p>The <code>-m</code> flag lets you write the commit message inline.</p>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              [main 3a2f1b4] Your commit message here
+ 2 files changed, 15 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 app.js
+            </div>
+
+            <h2>Writing Good Commit Messages</h2>
+            <p>Your commit messages should explain <strong>what</strong> changed and <strong>why</strong>. Good messages make it easier to understand your project's history.</p>
+
+            <h3>Good Examples ✓</h3>
+            <ul>
+              <li><code>"Add user login functionality"</code></li>
+              <li><code>"Fix navigation menu alignment on mobile"</code></li>
+              <li><code>"Update README with installation instructions"</code></li>
+              <li><code>"Remove deprecated API endpoints"</code></li>
+            </ul>
+
+            <h3>Bad Examples ✗</h3>
+            <ul>
+              <li><code>"fix"</code> - Fix what?</li>
+              <li><code>"updates"</code> - What updates?</li>
+              <li><code>"asdfasdf"</code> - Meaningless</li>
+              <li><code>"WIP"</code> - Doesn't explain anything</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Commit Message Convention</div>
+                <p class="callout-text">
+                  Start with a verb in present tense: "Add", "Fix", "Update", "Remove", "Refactor". Keep the first line under 50 characters.
+                </p>
+              </div>
+            </div>
+
+            <h2>The Complete Workflow</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># 1. Make changes to your files
+echo "New content" >> README.md
+
+# 2. Check what changed
+git status
+
+# 3. Stage your changes
+git add README.md
+
+# 4. Commit with a message
+git commit -m "Add new content to README"</pre>
+              </div>
+            </div>
+
+            <h2>Commit Without -m</h2>
+            <p>If you run <code>git commit</code> without <code>-m</code>, Git opens a text editor for you to write a longer message:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git commit</pre>
+              </div>
+            </div>
+
+            <p>This is useful for writing detailed multi-line messages.</p>
+
+            <h2>Amending the Last Commit</h2>
+            <p>Made a typo in your commit message? Forgot to include a file?</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># Fix the message
+git commit --amend -m "New corrected message"
+
+# Or add forgotten files to the last commit
+git add forgotten-file.txt
+git commit --amend --no-edit</pre>
+              </div>
+            </div>
+
+            <div class="callout callout-danger">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Warning</div>
+                <p class="callout-text">
+                  Only amend commits that haven't been pushed to a shared repository. Amending changes the commit's ID, which can cause problems for collaborators.
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#git-add" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← git add</span>
+                </div>
+              </a>
+              <a href="#git-log" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">git log →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 7: git log -->
+          <article id="git-log" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>git log</span>
+              </nav>
+              <h1 class="lesson-title">git log</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>Viewing Your History</h2>
+            <p>
+              The <code>git log</code> command shows you the history of commits in your repository. It's like a timeline of all the changes that have been made.
+            </p>
+
+            <h2>Basic Usage</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git log</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              commit 3a2f1b4c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a (HEAD -> main)
+Author: Your Name &lt;you@example.com&gt;
+Date:   Mon Jan 1 12:00:00 2024 -0500
+
+    Add user authentication feature
+
+commit 1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c
+Author: Your Name &lt;you@example.com&gt;
+Date:   Sun Dec 31 10:30:00 2023 -0500
+
+    Initial commit
+            </div>
+
+            <p>Each entry shows:</p>
+            <ul>
+              <li><strong>Commit hash</strong> - A unique identifier for the commit</li>
+              <li><strong>Author</strong> - Who made the commit</li>
+              <li><strong>Date</strong> - When the commit was made</li>
+              <li><strong>Message</strong> - The commit description</li>
+            </ul>
+
+            <h2>Useful Options</h2>
+
+            <h3>One Line Per Commit</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git log --oneline</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              3a2f1b4 Add user authentication feature
+1b2c3d4 Initial commit
+            </div>
+
+            <h3>Show Last N Commits</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git log -5</pre>
+              </div>
+            </div>
+
+            <h3>Show Graph View</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git log --oneline --graph --all</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              * 3a2f1b4 (HEAD -> main) Add user authentication
+| * 2b3c4d5 (feature) Work in progress
+|/
+* 1b2c3d4 Initial commit
+            </div>
+
+            <h3>Search Commits</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># Find commits with "bug" in the message
+git log --grep="bug"
+
+# Find commits by author
+git log --author="Your Name"</pre>
+              </div>
+            </div>
+
+            <div class="callout callout-info">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Pro Tip</div>
+                <p class="callout-text">
+                  Press <code>q</code> to exit the log view when it's showing in your terminal.
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#git-commit" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← git commit</span>
+                </div>
+              </a>
+              <a href="#branches" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">Branches →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 8: Branches -->
+          <article id="branches" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>Branches</span>
+              </nav>
+              <h1 class="lesson-title">Branches</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  8 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>What Are Branches?</h2>
+            <p>
+              Branches let you work on different versions of your project at the same time. Think of them like parallel universes for your code.
+            </p>
+            <p>
+              The main branch (often called <code>main</code> or <code>master</code>) is your primary timeline. You can create new branches to work on features, fix bugs, or experiment—without affecting the main code.
+            </p>
+
+            <h2>Why Use Branches?</h2>
+            <ul>
+              <li><strong>Safe experimentation</strong> - Try new ideas without breaking working code</li>
+              <li><strong>Parallel development</strong> - Multiple features can be developed simultaneously</li>
+              <li><strong>Code review</strong> - Changes can be reviewed before merging into main</li>
+              <li><strong>Bug fixes</strong> - Quickly create a branch to fix a bug in production</li>
+            </ul>
+
+            <h2>Creating a Branch</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git branch feature-login</pre>
+              </div>
+            </div>
+
+            <h2>Switching Branches</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git checkout feature-login
+
+# Or use the newer command
+git switch feature-login</pre>
+              </div>
+            </div>
+
+            <h2>Create and Switch in One Command</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git checkout -b feature-login
+
+# Or with switch
+git switch -c feature-login</pre>
+              </div>
+            </div>
+
+            <h2>Listing Branches</h2>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git branch</pre>
+              </div>
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">Output</div>
+              * feature-login
+  main
+            </div>
+
+            <p>The asterisk (*) shows which branch you're currently on.</p>
+
+            <h2>Merging Branches</h2>
+            <p>When your feature is complete, merge it back into main:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre># First, switch to main
+git checkout main
+
+# Then merge your feature branch
+git merge feature-login</pre>
+              </div>
+            </div>
+
+            <h2>Deleting a Branch</h2>
+            <p>After merging, you can delete the feature branch:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git branch -d feature-login</pre>
+              </div>
+            </div>
+
+            <div class="callout callout-warning">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Common Mistake</div>
+                <p class="callout-text">
+                  You can't delete the branch you're currently on. Switch to a different branch first before deleting.
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#git-log" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← git log</span>
+                </div>
+              </a>
+              <a href="#merge-vs-rebase" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">Merge vs Rebase →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 9: Merge vs Rebase -->
+          <article id="merge-vs-rebase" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>Merge vs Rebase</span>
+              </nav>
+              <h1 class="lesson-title">Merge vs Rebase</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  10 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>Two Ways to Combine Branches</h2>
+            <p>
+              When you want to bring changes from one branch into another, Git offers two main approaches: <strong>merge</strong> and <strong>rebase</strong>. Both accomplish the same goal but work differently.
+            </p>
+
+            <h2>Git Merge</h2>
+            <p>
+              Merge combines two branches by creating a new "merge commit" that ties them together. It preserves the complete history of both branches.
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git checkout main
+git merge feature-branch</pre>
+              </div>
+            </div>
+
+            <h3>Merge Visualization</h3>
+            <div class="output-block">
+              <div class="output-label">Before</div>
+                    A---B---C feature
+                   /
+              D---E---F---G main
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">After merge</div>
+                    A---B---C feature
+                   /         \
+              D---E---F---G---H main (merge commit)
+            </div>
+
+            <h3>Pros of Merge</h3>
+            <ul>
+              <li>Preserves complete history</li>
+              <li>Non-destructive operation</li>
+              <li>Shows when branches were combined</li>
+            </ul>
+
+            <h3>Cons of Merge</h3>
+            <ul>
+              <li>Can create a cluttered history with many merge commits</li>
+              <li>History can be harder to read</li>
+            </ul>
+
+            <h2>Git Rebase</h2>
+            <p>
+              Rebase moves your branch's commits to start from the tip of another branch, creating a linear history as if you started your work later.
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git checkout feature-branch
+git rebase main</pre>
+              </div>
+            </div>
+
+            <h3>Rebase Visualization</h3>
+            <div class="output-block">
+              <div class="output-label">Before</div>
+                    A---B---C feature
+                   /
+              D---E---F---G main
+            </div>
+
+            <div class="output-block">
+              <div class="output-label">After rebase</div>
+              D---E---F---G main
+                          \
+                           A'--B'--C' feature (rebased)
+            </div>
+
+            <h3>Pros of Rebase</h3>
+            <ul>
+              <li>Creates a clean, linear history</li>
+              <li>Easier to read and understand</li>
+              <li>No extra merge commits</li>
+            </ul>
+
+            <h3>Cons of Rebase</h3>
+            <ul>
+              <li>Rewrites commit history</li>
+              <li>Can cause problems if used on shared branches</li>
+            </ul>
+
+            <div class="callout callout-danger">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">The Golden Rule of Rebase</div>
+                <p class="callout-text">
+                  <strong>Never rebase commits that have been pushed to a public repository.</strong> Rebase rewrites history, which can cause serious problems for anyone who has based their work on those commits.
+                </p>
+              </div>
+            </div>
+
+            <h2>When to Use Which?</h2>
+            
+            <h3>Use Merge When:</h3>
+            <ul>
+              <li>Working on a shared/public branch</li>
+              <li>You want to preserve the complete history</li>
+              <li>Combining long-running branches</li>
+            </ul>
+
+            <h3>Use Rebase When:</h3>
+            <ul>
+              <li>Working on a local/private branch</li>
+              <li>You want a clean, linear history</li>
+              <li>Keeping your feature branch up to date with main</li>
+            </ul>
+
+            <nav class="lesson-nav">
+              <a href="#branches" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← Branches</span>
+                </div>
+              </a>
+              <a href="#github-basics" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Lesson</span>
+                  <span class="lesson-nav-btn-title">GitHub Basics →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+          <!-- Lesson 10: GitHub Basics -->
+          <article id="github-basics" class="lesson-article" style="display: none;">
+            <header class="lesson-header">
+              <nav class="lesson-breadcrumb">
+                <a href="learn.html">Lessons</a>
+                <span class="lesson-breadcrumb-separator">/</span>
+                <span>GitHub Basics</span>
+              </nav>
+              <h1 class="lesson-title">GitHub Basics</h1>
+              <div class="lesson-meta">
+                <span class="lesson-meta-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  10 min read
+                </span>
+              </div>
+            </header>
+
+            <h2>What is GitHub?</h2>
+            <p>
+              GitHub is a web platform that hosts Git repositories online. It adds collaboration features like pull requests, issues, and project management on top of Git.
+            </p>
+            <p>
+              While Git works locally on your computer, GitHub lets you:
+            </p>
+            <ul>
+              <li>Back up your code in the cloud</li>
+              <li>Share projects with others</li>
+              <li>Collaborate with teammates</li>
+              <li>Contribute to open-source projects</li>
+            </ul>
+
+            <h2>Connecting to GitHub</h2>
+
+            <h3>1. Create a Repository on GitHub</h3>
+            <ol>
+              <li>Go to github.com and sign in</li>
+              <li>Click the "+" icon → "New repository"</li>
+              <li>Name your repository</li>
+              <li>Choose public or private</li>
+              <li>Click "Create repository"</li>
+            </ol>
+
+            <h3>2. Connect Your Local Repo</h3>
+            <p>Add GitHub as a remote:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git remote add origin https://github.com/username/repo-name.git</pre>
+              </div>
+            </div>
+
+            <h3>3. Push Your Code</h3>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git push -u origin main</pre>
+              </div>
+            </div>
+
+            <p>The <code>-u</code> flag sets up tracking so future pushes just need <code>git push</code>.</p>
+
+            <h2>Cloning a Repository</h2>
+            <p>To download an existing repository:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git clone https://github.com/username/repo-name.git</pre>
+              </div>
+            </div>
+
+            <h2>Pulling Changes</h2>
+            <p>Get the latest changes from GitHub:</p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span>Terminal</span>
+                <button class="code-copy-btn">Copy</button>
+              </div>
+              <div class="code-content">
+                <pre>git pull origin main</pre>
+              </div>
+            </div>
+
+            <h2>The GitHub Workflow</h2>
+            <ol>
+              <li><strong>Fork</strong> - Copy someone else's repository to your account</li>
+              <li><strong>Clone</strong> - Download the repo to your computer</li>
+              <li><strong>Branch</strong> - Create a branch for your changes</li>
+              <li><strong>Commit</strong> - Make and save your changes</li>
+              <li><strong>Push</strong> - Upload your branch to GitHub</li>
+              <li><strong>Pull Request</strong> - Ask the owner to review and merge your changes</li>
+            </ol>
+
+            <div class="callout callout-success">
+              <svg class="callout-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="callout-content">
+                <div class="callout-title">Congratulations! 🎉</div>
+                <p class="callout-text">
+                  You've completed all the lessons! You now have a solid foundation in Git. Keep practicing in the <a href="playground.html">Playground</a> and refer to the <a href="cheatsheet.html">Cheatsheet</a> when you need a quick reference.
+                </p>
+              </div>
+            </div>
+
+            <nav class="lesson-nav">
+              <a href="#merge-vs-rebase" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Previous Lesson</span>
+                  <span class="lesson-nav-btn-title">← Merge vs Rebase</span>
+                </div>
+              </a>
+              <a href="playground.html" class="lesson-nav-btn">
+                <div>
+                  <span class="lesson-nav-btn-label">Next Step</span>
+                  <span class="lesson-nav-btn-title">Try the Playground →</span>
+                </div>
+              </a>
+            </nav>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Built by <strong>XDAS Research</strong> • Open Source • MIT License
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/xdas-research/xdas-git-school" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/issues" class="footer-link" target="_blank" rel="noopener">Report Issue</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Lesson navigation - show/hide lessons based on hash
+    function showLesson(hash) {
+      const lessons = document.querySelectorAll('.lesson-article');
+      const navLinks = document.querySelectorAll('.lesson-nav-link');
+      
+      lessons.forEach(lesson => {
+        lesson.style.display = lesson.id === hash.replace('#', '') ? 'block' : 'none';
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === hash);
+      });
+    }
+
+    // Handle hash changes
+    window.addEventListener('hashchange', () => {
+      showLesson(window.location.hash || '#what-is-git');
+    });
+
+    // Initial load
+    showLesson(window.location.hash || '#what-is-git');
+
+    // Handle clicks on lesson navigation
+    document.querySelectorAll('.lesson-nav-link, .lesson-nav-btn').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          window.location.hash = href;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

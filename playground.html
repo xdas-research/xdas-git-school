@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice Git commands in an interactive, browser-based terminal simulator. No installation required.">
+  <title>Git Playground - XDAS Git School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.007 8.222A3.738 3.738 0 0 0 17.5 5.33a3.662 3.662 0 0 0-3.17 1.881A3.007 3.007 0 0 0 12.003 6a3.007 3.007 0 0 0-2.326 1.211A3.662 3.662 0 0 0 6.507 5.33a3.738 3.738 0 0 0-3.507 2.892 3.737 3.737 0 0 0 1.823 4.07A3.738 3.738 0 0 0 6.507 18.67a3.662 3.662 0 0 0 3.17-1.881c.605.737 1.511 1.211 2.326 1.211a3.007 3.007 0 0 0 2.327-1.211 3.662 3.662 0 0 0 3.17 1.881 3.738 3.738 0 0 0 1.684-6.377 3.737 3.737 0 0 0 1.823-4.07zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Git School
+      </a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="playground.html" class="nav-link active">Playground</a>
+        <a href="cheatsheet.html" class="nav-link">Cheatsheet</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="playground-layout">
+        <!-- Terminal -->
+        <div class="playground-terminal">
+          <div class="playground-header">
+            <div class="playground-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="playground-title">Git Playground — /my-project</span>
+            <div class="playground-actions">
+              <button class="playground-action-btn" data-action="clear">Clear</button>
+              <button class="playground-action-btn" data-action="reset">Reset</button>
+            </div>
+          </div>
+          
+          <div class="playground-output" aria-live="polite">
+            <!-- Output will be rendered here by JavaScript -->
+          </div>
+          
+          <div class="playground-input-wrapper">
+            <span class="input-prompt">$</span>
+            <input 
+              type="text" 
+              class="playground-input" 
+              placeholder="Type a Git command (try 'help' to start)"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Command input"
+            >
+          </div>
+        </div>
+
+        <!-- Help Panel -->
+        <aside class="playground-help">
+          <div class="help-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Quick Reference
+          </div>
+          
+          <div class="help-content">
+            <!-- Status Indicator -->
+            <div class="help-section">
+              <h3 class="help-section-title">Repository Status</h3>
+              <div class="status-indicator">
+                <span class="status-dot not-initialized"></span>
+                <span class="status-text">No repository</span>
+              </div>
+            </div>
+
+            <!-- Available Commands -->
+            <div class="help-section">
+              <h3 class="help-section-title">Getting Started</h3>
+              <div class="help-command-list">
+                <div class="help-command">
+                  <span class="help-command-name">git init</span>
+                  <span class="help-command-desc">Initialize a new repository</span>
+                </div>
+                <div class="help-command">
+                  <span class="help-command-name">git status</span>
+                  <span class="help-command-desc">Check current status</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-section">
+              <h3 class="help-section-title">Staging & Committing</h3>
+              <div class="help-command-list">
+                <div class="help-command">
+                  <span class="help-command-name">git add .</span>
+                  <span class="help-command-desc">Stage all files</span>
+                </div>
+                <div class="help-command">
+                  <span class="help-command-name">git add &lt;file&gt;</span>
+                  <span class="help-command-desc">Stage a specific file</span>
+                </div>
+                <div class="help-command">
+                  <span class="help-command-name">git commit -m "msg"</span>
+                  <span class="help-command-desc">Commit staged changes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-section">
+              <h3 class="help-section-title">History & Info</h3>
+              <div class="help-command-list">
+                <div class="help-command">
+                  <span class="help-command-name">git log</span>
+                  <span class="help-command-desc">View commit history</span>
+                </div>
+                <div class="help-command">
+                  <span class="help-command-name">git branch</span>
+                  <span class="help-command-desc">List branches</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-section">
+              <h3 class="help-section-title">Other Commands</h3>
+              <div class="help-command-list">
+                <div class="help-command">
+                  <span class="help-command-name">help</span>
+                  <span class="help-command-desc">Show all commands</span>
+                </div>
+                <div class="help-command">
+                  <span class="help-command-name">clear</span>
+                  <span class="help-command-desc">Clear the terminal</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tips -->
+            <div class="help-section">
+              <h3 class="help-section-title">Tips</h3>
+              <ul style="font-size: var(--font-size-xs); color: var(--color-text-secondary); padding-left: var(--space-3); list-style: disc;">
+                <li style="margin-bottom: var(--space-1);">Click any command above to insert it</li>
+                <li style="margin-bottom: var(--space-1);">Press Enter to execute</li>
+                <li>Use "Reset" to start over</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Built by <strong>XDAS Research</strong> • Open Source • MIT License
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/xdas-research/xdas-git-school" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/issues" class="footer-link" target="_blank" rel="noopener">Report Issue</a>
+        <a href="https://github.com/xdas-research/xdas-git-school/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
